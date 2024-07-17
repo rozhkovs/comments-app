@@ -1,2 +1,4 @@
 export { View } from 'react-native';
-export { ThemeProvider, Text } from '@rneui/themed';
+export { Text, makeStyles } from '@rneui/themed';
+
+export { default as ThemeProvider } from './ThemeProvider';
