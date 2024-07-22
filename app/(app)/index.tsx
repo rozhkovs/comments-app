@@ -1,4 +1,4 @@
-import { CommentList } from '@/components/comment';
+import { CommentList } from '@/widgets/comment';
 
 export default function Comments() {
   return <CommentList />;

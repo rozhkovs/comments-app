@@ -17,7 +17,7 @@ import { Comment } from '@/store/comment';
 import { ListFooter } from '@/shared/ui-kit/core';
 import { useHeaderHeight } from '@react-navigation/elements';
 import { useStableCallback } from '@/shared/utils/react-useful-hooks';
-import CommentCreateListItem from '@/components/comment/CommentCreateListItem';
+import CommentCreateListItem from '@/widgets/comment/CommentCreateListItem';
 import CommentListItem from './CommentListItem';
 
 const ConnectedListFooter = memo(() => {

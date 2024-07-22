@@ -1,8 +1,8 @@
 import { Redirect, Stack } from 'expo-router';
 import { getCurUserSelector, useAppSelector } from '@/store';
 import { useTranslation } from 'react-i18next';
-import { CommentAddHeaderRightButton } from '@/components/comment';
-import { SignOutIconButton } from '@/components/auth';
+import { CommentAddHeaderRightButton } from '@/widgets/comment';
+import { SignOutIconButton } from '@/widgets/auth';
 
 export default function AppLayout() {
   const { t } = useTranslation(['comment']);
