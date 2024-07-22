@@ -10,6 +10,7 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 import { ThemeProvider } from '@/components/ui-kit/core';
 import store from '@/store';
 import '@/shared/localization';
+import '@/shared/dayjs/extensions';
 
 export default function RootLayout() {
   const { t } = useTranslation(['signup']);
