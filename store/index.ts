@@ -13,9 +13,22 @@ import {
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import authReducer from './auth';
+import commentReducer from './comment';
 
 // region exports from imports
 export { signUp, signOut, getCurUserSelector } from './auth';
+export {
+  loadNextPageComments,
+  createComment,
+  startWritingNewComment,
+  cancelWritingNewComment,
+  commentReplyingIdsSelector,
+  commentsSelector,
+  sortedCascadeCommentsSelector,
+  allowLoadCommentNextPageSelector,
+  isCommentListRefreshingSelector,
+  visibleCommentFooterLoaderSelector,
+} from './comment';
 // endregion
 
 const persistedAuthReducer = persistReducer(
@@ -28,6 +41,7 @@ const persistedAuthReducer = persistReducer(
 
 const rootReducer = {
   auth: persistedAuthReducer,
+  comment: commentReducer,
 };
 
 const store = configureStore({
