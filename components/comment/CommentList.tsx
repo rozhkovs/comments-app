@@ -14,7 +14,7 @@ import {
 } from '@/store';
 import { Platform } from 'expo-modules-core';
 import { Comment } from '@/store/comment';
-import { ListFooter } from '@/components/ui-kit/core';
+import { ListFooter } from '@/shared/ui-kit/core';
 import { useHeaderHeight } from '@react-navigation/elements';
 import { useStableCallback } from '@/shared/utils/react-useful-hooks';
 import CommentCreateListItem from '@/components/comment/CommentCreateListItem';

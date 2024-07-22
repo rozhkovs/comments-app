@@ -7,7 +7,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import { Provider as StoreProvider } from 'react-redux';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import { ThemeProvider } from '@/components/ui-kit/core';
+import { ThemeProvider } from '@/shared/ui-kit/core';
 import store from '@/store';
 import '@/shared/localization';
 import '@/shared/dayjs/extensions';

@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { View } from 'react-native';
 import dayjs from 'dayjs';
-import { Text, Icon, makeStyles } from '@/components/ui-kit/core';
+import { Text, Icon, makeStyles } from '@/shared/ui-kit/core';
 import { startWritingNewComment, useAppDispatch } from '@/store';
 import { useStableCallback } from '@/shared/utils/react-useful-hooks';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from '@/components/ui-kit/core';
+import { Icon } from '@/shared/ui-kit/core';
 import { startWritingNewComment, useAppDispatch } from '@/store';
 
 const CommentAddIconButton = () => {

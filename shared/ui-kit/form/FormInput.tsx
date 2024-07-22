@@ -5,7 +5,7 @@ import {
   FieldPath,
   UseControllerProps,
 } from 'react-hook-form';
-import { Input, InputProps } from '@/components/ui-kit/core';
+import { Input, InputProps } from '@/shared/ui-kit/core';
 
 type FormInputProps<
   FieldValuesT extends FieldValues,

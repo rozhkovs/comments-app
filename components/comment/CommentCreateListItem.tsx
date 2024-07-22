@@ -8,8 +8,8 @@ import {
   CommentCreate,
   createComment,
 } from '@/store/comment';
-import { Button, makeStyles } from '@/components/ui-kit/core';
-import { FormInput } from '@/components/ui-kit/form';
+import { Button, makeStyles } from '@/shared/ui-kit/core';
+import { FormInput } from '@/shared/ui-kit/form';
 import { getCurUserSelector, useAppDispatch, useAppSelector } from '@/store';
 import { useStableCallback } from '@/shared/utils/react-useful-hooks';
 import { isEmptyString } from '@/shared/utils/string';

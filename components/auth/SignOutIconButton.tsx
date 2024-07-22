@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { signOut, useAppDispatch } from '@/store';
-import { Icon } from '@/components/ui-kit/core';
+import { Icon } from '@/shared/ui-kit/core';
 
 const SignOutIconButton = () => {
   const dispatch = useAppDispatch();
