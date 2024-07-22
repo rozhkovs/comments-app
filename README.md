@@ -1,50 +1,58 @@
-# Welcome to your Expo app 👋
+# Comments App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Screens
+<table>
+  <tr>
+    <td>
+      <img src="./docs/images/android_sign-up.jpg" width="300" />
+    </td>
+    <td>
+      <img src="./docs/images/android_comments.jpg" width="300" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="./docs/images/ios_sign-up.jpg" width="300" />
+    </td>
+    <td>
+      <img src="./docs/images/ios_comments.jpg" width="300" />
+    </td>
+  </tr>
+</table>
 
-## Get started
+## How to run?
 
-1. Install dependencies
+### iOS
 
-   ```bash
-   npm install
-   ```
+#### prerequires
+1. Installed [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12), [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm), [yarn](https://yarnpkg.com/getting-started/install), [node](https://nodejs.org/en/download/package-manager)
+2. Run scripts in the project root directory
 
-2. Start the app
+#### Steps
 
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```shell
+# step 1
+yarn install
+# step 2
+npx expo prebuild
+# step 3
+npx expo run:ios --configuration release --device
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Android
 
-## Learn more
+#### prerequires
+1. Installed [Android Studio](https://developer.android.com/studio), [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm), [yarn](https://yarnpkg.com/getting-started/install), [node](https://nodejs.org/en/download/package-manager)
+2. Run scripts in the project root directory
 
-To learn more about developing your project with Expo, look at the following resources:
+#### Steps
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```shell
+# step 1
+yarn install
+# step 2
+npx expo prebuild
+# step 3
+npx expo run:android --variant release --device
+```
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
