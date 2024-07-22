@@ -16,6 +16,7 @@ import { useStableCallback } from '@/shared/utils/react-useful-hooks';
 import { signUp, UserSignUp } from '@/store/auth';
 import { useAppDispatch } from '@/store';
 import { checkFormatEmail, checkFormatName } from '@/shared/user';
+import { isEmptyString } from '@/shared/utils/string';
 
 export default function SignUp() {
   const { t } = useTranslation('signup');
@@ -45,17 +46,23 @@ export default function SignUp() {
 
   const emailRules = useMemo(
     () => ({
-      required: t('input.email.required'),
-      validate: (value: string) =>
-        checkFormatEmail(value) || t('input.email.invalidFormat'),
+      validate: {
+        required: (value: string) =>
+          !isEmptyString(value) || t('input.email.required'),
+        format: (value: string) =>
+          checkFormatEmail(value) || t('input.email.invalidFormat'),
+      },
     }),
     [t],
   );
   const nameRules = useMemo(
     () => ({
-      required: t('input.name.required'),
-      validate: (value: string) =>
-        checkFormatName(value) || t('input.name.invalidFormat'),
+      validate: {
+        required: (value: string) =>
+          !isEmptyString(value) || t('input.name.required'),
+        format: (value: string) =>
+          checkFormatName(value) || t('input.name.invalidFormat'),
+      },
     }),
     [t],
   );
