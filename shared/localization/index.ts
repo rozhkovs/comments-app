@@ -1,9 +1,11 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { getLocales } from 'expo-localization';
+import dayjs from 'dayjs';
+import 'intl-pluralrules';
+import '@/shared/dayjs/extensions';
 import { enLocale } from './resources/en';
 import { ruLocale } from './resources/ru';
-import 'intl-pluralrules';
 
 const resources = {
   en: enLocale,
@@ -21,11 +23,15 @@ const searchBestLanguageCode = () => {
   return bestLocale?.languageCode ?? DEFAULT_LANGUAGE_CODE;
 };
 
+const currentLanguageCode = searchBestLanguageCode();
+
+dayjs.locale(currentLanguageCode);
+
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
-    lng: searchBestLanguageCode(),
+    lng: currentLanguageCode,
     fallbackLng: DEFAULT_LANGUAGE_CODE,
   });
 

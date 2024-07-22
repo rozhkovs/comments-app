@@ -24,4 +24,17 @@ export const enLocale = {
       notValid: 'Please check the correctness of the filled in fields',
     },
   },
+  comment: {
+    title: 'Comments',
+    input: {
+      message: {
+        placeholder: 'Write your comment...',
+        required: 'Comment required',
+      },
+    },
+    button: {
+      publish: 'Publish',
+      cancel: 'Cancel',
+    },
+  },
 };

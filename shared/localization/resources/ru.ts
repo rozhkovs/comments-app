@@ -26,4 +26,17 @@ export const ruLocale: AppLocale = {
       notValid: 'Пожалуйста, проверьте правильность заполненных полей',
     },
   },
+  comment: {
+    title: 'Комментарии',
+    input: {
+      message: {
+        placeholder: 'Напишите свой комментарий...',
+        required: 'Необходимо ввести комментарий',
+      },
+    },
+    button: {
+      publish: 'Опубликовать',
+      cancel: 'Отмена',
+    },
+  },
 };
