@@ -1,7 +1,11 @@
 import { Redirect, Stack } from 'expo-router';
 import { getCurUserSelector, useAppSelector } from '@/store';
+import { useTranslation } from 'react-i18next';
+import { CommentAddHeaderRightButton } from '@/components/comment';
+import { SignOutIconButton } from '@/components/auth';
 
 export default function AppLayout() {
+  const { t } = useTranslation(['comment']);
   const user = useAppSelector(getCurUserSelector);
 
   if (!user) {
@@ -10,7 +14,14 @@ export default function AppLayout() {
 
   return (
     <Stack>
-      <Stack.Screen name="index" />
+      <Stack.Screen
+        name="index"
+        options={{
+          title: t('title'),
+          headerLeft: () => <SignOutIconButton />,
+          headerRight: () => <CommentAddHeaderRightButton />,
+        }}
+      />
     </Stack>
   );
 }

@@ -1,15 +1,5 @@
-import { Button } from '@/components/ui-kit/core';
-import { signOut, useAppDispatch } from '@/store';
+import { CommentList } from '@/components/comment';
 
-export default function Index() {
-  const dispatch = useAppDispatch();
-
-  return (
-    <Button
-      title={'Sign out'}
-      onPress={() => {
-        dispatch(signOut());
-      }}
-    />
-  );
+export default function Comments() {
+  return <CommentList />;
 }
